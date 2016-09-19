@@ -8,6 +8,8 @@ import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,46 +21,46 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-public class MainController{
+public class MainController  {
 
-	@FXML private PasswordField pass;
-	
-	@FXML private Button btnEntrar;
-	
-	private Button btSair;	
+	@FXML
+	private PasswordField pass;
+
+	@FXML
+	private Button btnEntrar;
+
+	private Button btSair;
 	
 
-	public void btnEntrar(ActionEvent event){
-		if(pass.getText().equals("admin")){
-			System.out.println("Entrou!");
+	public void btnEntrar(ActionEvent event) {
+		if (pass.getText().equals("admin")) {
 			try {
 				segundaTela();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} catch (IOException e) {				
 				e.printStackTrace();
-			}			
+			}
 		} else {
 			JOptionPane.showMessageDialog(null, "Senha Incorreta!");
 		}
 	}
-	
-	
-	public void btnEnter(KeyEvent e){
-		if(e.getCode() == KeyCode.ENTER){
-			if(pass.getText().equals("admin")){
-			System.out.println("Entrou com o Enter!");
+
+	public void btnEnter(KeyEvent e) {
+		if (e.getCode() == KeyCode.ENTER) {
+			if (pass.getText().equals("admin")) {
+				System.out.println("Entrou com o Enter!");
 			} else {
 				System.out.println("Senhas Incorretas!");
 			}
 		}
 	}
 	
-	public void btnSair(ActionEvent event){
+	
+
+	public void btnSair(ActionEvent event) {
 		System.exit(0);
 	}
 
-
-	public void segundaTela() throws IOException{
+	public void segundaTela() throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("/br/com/techjumpers/view/Principal.fxml"));
 		Scene scene = new Scene(root);
 		Stage segunda = new Stage();
@@ -66,5 +68,12 @@ public class MainController{
 		segunda.setMaximized(true);
 		segunda.show();
 	}
+	
+	public Button getBtnEntrar() {
+		return btnEntrar;
+	}
+	
+
+	
 
 }
