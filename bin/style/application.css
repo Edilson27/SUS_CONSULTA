@@ -3,3 +3,11 @@
 	/*-fx-background-color: red ;*/
 	
 }
+
+#fundo {
+	-fx-background-color: green;
+}
+
+#fundoSegundaTela {
+	-fx-background-color: green;
+}

@@ -21,7 +21,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-public class MainController  {
+public class MainController {
 
 	@FXML
 	private PasswordField pass;
@@ -30,12 +30,13 @@ public class MainController  {
 	private Button btnEntrar;
 
 	private Button btSair;
-	
+	Main main = new Main();
 
 	public void btnEntrar(ActionEvent event) {
 		if (pass.getText().equals("admin")) {
 			try {
 				segundaTela();
+				
 			} catch (IOException e) {				
 				e.printStackTrace();
 			}
@@ -44,7 +45,7 @@ public class MainController  {
 		}
 	}
 
-	public void btnEnter(KeyEvent e) {
+	/*public void btnEnter(KeyEvent e) {
 		if (e.getCode() == KeyCode.ENTER) {
 			if (pass.getText().equals("admin")) {
 				System.out.println("Entrou com o Enter!");
@@ -52,7 +53,7 @@ public class MainController  {
 				System.out.println("Senhas Incorretas!");
 			}
 		}
-	}
+	}*/
 	
 	
 
@@ -67,13 +68,8 @@ public class MainController  {
 		segunda.setScene(scene);
 		segunda.setMaximized(true);
 		segunda.show();
+		Main.getStage().close(); //Fecha a primeira Tela
 	}
-	
-	public Button getBtnEntrar() {
-		return btnEntrar;
-	}
-	
-
 	
 
 }

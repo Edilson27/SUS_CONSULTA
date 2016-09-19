@@ -9,13 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0"
-	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
-		<BorderPane layoutX="210.0" layoutY="189.0" prefHeight="600.0"
-			prefWidth="600.0" AnchorPane.bottomAnchor="0.0"
-			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-			AnchorPane.topAnchor="0.0">
+		<BorderPane fx:id="fundoSegundaTela" layoutX="210.0" layoutY="189.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<top>
 				<MenuBar BorderPane.alignment="CENTER">
 					<menus>
@@ -23,80 +19,18 @@
 							<items>
 								<MenuItem mnemonicParsing="false" text="Registro">
 									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0"
-											pickOnBounds="true" preserveRatio="true">
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
 											<image>
 												<Image url="@/img/novo-reg.png" />
 											</image>
 										</ImageView>
 									</graphic>
 								</MenuItem>
-								<MenuItem mnemonicParsing="false" text="Agente de Saúde" >
+								<MenuItem mnemonicParsing="false" text="Agente de Saúde">
 									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0"
-											pickOnBounds="true" preserveRatio="true">
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
 											<image>
 												<Image url="@/img/add.png" />
-											</image>
-										</ImageView>
-									</graphic>
-								</MenuItem>
-								<MenuItem mnemonicParsing="false" text="Posto" >
-									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0"
-											pickOnBounds="true" preserveRatio="true">
-											<image>
-												<Image url="@/img/cruz.png" />
-											</image>
-										</ImageView>
-									</graphic>
-								</MenuItem>
-								<MenuItem mnemonicParsing="false" text="Tipo de Atendimento">
-									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0"
-											pickOnBounds="true" preserveRatio="true">
-											<image>
-												<Image url="@/img/atendente.png" />
-											</image>
-										</ImageView>
-									</graphic>
-								</MenuItem>
-								<MenuItem mnemonicParsing="false" text="Sair">
-									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0"
-											pickOnBounds="true" preserveRatio="true">
-											<image>
-												<Image url="@/img/close.png" />
-											</image>
-										</ImageView>
-									</graphic>
-								</MenuItem>
-							</items>
-							<graphic>
-								<ImageView fitHeight="30.0" fitWidth="40.0"
-									pickOnBounds="true" preserveRatio="true">
-									<image>
-										<Image url="@/img/novo.png" />
-									</image>
-								</ImageView>
-							</graphic>
-						</Menu>
-						<Menu mnemonicParsing="false" text="Visualizar">
-							<items>
-								<MenuItem mnemonicParsing="false" text="Agendamentos" >
-									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-											<image>
-												<Image url="@/img/agenda.png"/>
-											</image>
-										</ImageView>
-									</graphic>
-								</MenuItem>
-								<MenuItem mnemonicParsing="false" text="Agente Comunitário de Saúde">
-									<graphic>
-										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-											<image>
-												<Image url="@/img/medico.png"/>
 											</image>
 										</ImageView>
 									</graphic>
@@ -105,7 +39,7 @@
 									<graphic>
 										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
 											<image>
-												<Image url="@/img/posto.png"/>
+												<Image url="@/img/cruz.png" />
 											</image>
 										</ImageView>
 									</graphic>
@@ -114,15 +48,70 @@
 									<graphic>
 										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
 											<image>
-												<Image url="@/img/vizu.png"/>
+												<Image url="@/img/atendente.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" text="Sair">
+									<graphic>
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@/img/close.png" />
 											</image>
 										</ImageView>
 									</graphic>
 								</MenuItem>
 							</items>
 							<graphic>
-								<ImageView fitHeight="30.0" fitWidth="40.0"
-									pickOnBounds="true" preserveRatio="true">
+								<ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@/img/novo.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Visualizar">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Agendamentos">
+									<graphic>
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@/img/agenda.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" text="Agente Comunitário de Saúde">
+									<graphic>
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@/img/medico.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" text="Posto">
+									<graphic>
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@/img/posto.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" text="Tipo de Atendimento">
+									<graphic>
+										<ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@/img/vizu.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+							</items>
+							<graphic>
+								<ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@/img/lupa-green6.png" />
 									</image>
@@ -135,15 +124,14 @@
 									<graphic>
 										<ImageView fitHeight="30.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
 											<image>
-												<Image url="@/img/bloqueio.png"/>
+												<Image url="@/img/bloqueio.png" />
 											</image>
 										</ImageView>
 									</graphic>
 								</MenuItem>
 							</items>
 							<graphic>
-								<ImageView fitHeight="30.0" fitWidth="40.0"
-									pickOnBounds="true" preserveRatio="true">
+								<ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@/img/engrenagem.png" />
 									</image>
@@ -156,7 +144,7 @@
 									<graphic>
 										<ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
 											<image>
-												<Image url="@/img/desenvolvedor.png"/>
+												<Image url="@/img/desenvolvedor.png" />
 											</image>
 										</ImageView>
 									</graphic>
@@ -165,15 +153,14 @@
 									<graphic>
 										<ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
 											<image>
-												<Image url="@/img/ajuda.png"/>
+												<Image url="@/img/ajuda.png" />
 											</image>
 										</ImageView>
 									</graphic>
 								</MenuItem>
 							</items>
 							<graphic>
-								<ImageView fitHeight="30.0" fitWidth="40.0"
-									pickOnBounds="true" preserveRatio="true">
+								<ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@/img/info.png" />
 									</image>

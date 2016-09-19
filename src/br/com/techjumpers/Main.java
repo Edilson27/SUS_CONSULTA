@@ -10,7 +10,7 @@ import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {	
-		
+	private static Stage stage;
 	@Override	
 	public void start(Stage primaryStage) {
 		try {
@@ -20,10 +20,17 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setResizable(false);			
 			primaryStage.show();
+			
+			Main.stage= primaryStage; //Com isso podemos fechar esta tela 1
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public static Stage getStage() {
+		return stage;
+	}
+
 	
 	public static void main(String[] args) {
 		launch(args);
