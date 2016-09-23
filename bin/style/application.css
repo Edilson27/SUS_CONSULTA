@@ -11,3 +11,14 @@
 #fundoSegundaTela {
 	-fx-background-color: green;
 }
+
+#lblBeta, #menuBar {
+	-fx-background-color: lightgray  ;
+}
+
+/*
+#menuBar {
+	-fx-background-color: lightgray ;
+}
+* 
+*/
