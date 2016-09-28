@@ -16,9 +16,10 @@
 	-fx-background-color: lightgray  ;
 }
 
-/*
-#menuBar {
-	-fx-background-color: lightgray ;
-}
-* 
-*/
+
+/* ================================== Menu Sobre ====================================*/
+/* DESENVOLVEDOR */
+
+#paneContato {
+	-fx-background-color: gray ;
+} 

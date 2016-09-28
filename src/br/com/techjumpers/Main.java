@@ -19,7 +19,7 @@ public class Main extends Application {
 			primaryStage.setResizable(false);			
 			primaryStage.show();
 			
-			Main.stage= primaryStage; //Com isso podemos fechar esta tela 1
+			Main.stage= primaryStage; //Com isso permite fecharmos esta tela 
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -28,7 +28,6 @@ public class Main extends Application {
 	public static Stage getStage() {
 		return stage;
 	}
-
 	
 	public static void main(String[] args) {
 		launch(args);

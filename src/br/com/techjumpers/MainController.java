@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 
 import com.sun.javafx.application.LauncherImpl;
 
+import br.com.techjumpers.controller.CadastroTipoAtendimentoController;
 import br.com.techjumpers.controller.ContatoController;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -33,7 +34,7 @@ public class MainController {
 	@FXML private Button btnEntrar;
 	@FXML private MenuItem novoTipAtendimento;
 
-	private Button btSair;
+	
 	Main main = new Main();
 
 	public void btnEntrar(ActionEvent event) {
@@ -48,17 +49,6 @@ public class MainController {
 		}
 	}
 
-	/*public void btnEnter(KeyEvent e) {
-		if (e.getCode() == KeyCode.ENTER) {
-			if (pass.getText().equals("admin")) {
-				System.out.println("Entrou com o Enter!");
-			} else {
-				System.out.println("Senhas Incorretas!");
-			}
-		}
-	}*/
-	
-	
 
 	public void btnSair(ActionEvent event) {
 		System.exit(0);
@@ -70,8 +60,7 @@ public class MainController {
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("/style/application.css").toExternalForm());
 		
-		novoTipAtendimento = new MenuItem();
-	
+		novoTipAtendimento = new MenuItem();	
 		
 		Stage segunda = new Stage();		
 		segunda.setScene(scene);
@@ -80,8 +69,16 @@ public class MainController {
 		Main.getStage().close(); //Fecha a primeira Tela
 	}
 	
+	
+	
+	
 	public void telaContato(ActionEvent event) throws Exception{
 		new ContatoController().start(new Stage());
 	}
+		
+	public void telaCadEspecialista(ActionEvent event) throws Exception {
+		new CadastroTipoAtendimentoController().start(new Stage());
+	}
 
+	
 }
